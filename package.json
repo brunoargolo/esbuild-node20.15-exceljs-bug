@@ -1,0 +1,21 @@
+{
+  "name": "exceljsbug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.js",
+    "test-15.1": "volta pin node@20.15.1 && node esbuild.js && node test.js",
+    "test-14.0": "volta pin node@20.14.0 && node esbuild.js && node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.23.0",
+    "exceljs": "^4.4.0"
+  },
+  "volta": {
+    "node": "20.15.0"
+  }
+}
