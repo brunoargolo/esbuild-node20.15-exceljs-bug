@@ -1,13 +1,17 @@
 Assuming volta is your node version manager, please adjust accordingly
 
 This works fine with up to node 20.14:
+```
 volta pin node@20.14.0 && node esbuild.js && node test.js
+```
 ```
 Success!!!
 ```
 
 But breaks starting node 20.15:
+```
 volta pin node@20.15.0 && node esbuild.js && node test.js
+```
 ```
 node:internal/util:508
         filename[0] !== '/' &&
@@ -31,7 +35,9 @@ TypeError: Cannot read properties of null (reading '0')
 ```
 
 Runnig straight without esbuild:
+```
 volta pin node@20.15.0 && node test-straight.js
+```
 ```
 Success!!!
 ```
